@@ -1,0 +1,58 @@
+-------------------------------------------------------------
+ ANOTHER METHOD FOR THE RANDOM FUNCTIONS (this also works
+    but I wanted to try to factor the code)
+-------------------------------------------------------------
+const getCompChoice = () => {
+    const randomComp = Math.floor((Math.random() * 3));
+    if (randomComp == 0) {
+      return('Rock');
+    } else if (randomComp == 1) {
+      return('Paper');
+    } else {
+      return('Scissors');
+    }
+  }
+  getCompChoice();
+
+const getPlayerChoice = () => {
+    const randomPlayer = Math.floor((Math.random() * 3));
+    if (randomPlayer == 0) {
+      return('Rock');
+    } else if (randomPlayer == 1) {
+      return('Paper');
+    } else {
+      return('Scissors');
+    }
+  }
+  getPlayerChoice();
+
+  const player = getPlayerChoice();
+    const comp = getCompChoice();
+
+  const choiceCompare = () => {
+        if (player=='Rock' && comp=='Paper') {
+        return('Paper covers Rock, Computer Wins');
+    }   else if (player=='Rock' && comp=='Scissors') {
+        return('Rock breaks Scissors, You Win!');
+    }   else if (player=='Paper' && comp=='Scissors') {
+        return('Scissors cut Paper, Computer Wins');
+    }   else if (player=='Paper' && comp=='Rock') {
+        return('Paper covers Rock, You Win!');
+    }   else if (player=='Scissors' && comp=='Rock') {
+        return('Rock breaks Scissors, Computer Wins');
+    }   else if (player=='Scissors' && comp=='Paper') {
+        return('Scissors cut Paper, You Win!');
+    }   else if (player == comp) {
+        return('Tie, try again!');
+    }
+  }
+  choiceCompare();
+  console.log(player);
+  console.log(comp);
+  console.log(choiceCompare());
+  
+  -------------------------------------------------------
+  END SECTION
+  -------------------------------------------------------
+
+  
